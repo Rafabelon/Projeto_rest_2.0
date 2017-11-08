@@ -1,6 +1,10 @@
 #ifndef ADMINISTRATIVO_C
 #define ADMINISTRATIVO_H
 #include "clientes.h"
+
+
+
+
 /*Opcao Funcionarios no menu_principal */
 #define ADMINISTRATIVO 3
 
@@ -19,6 +23,10 @@
 #define NOVA_SENHA 4
 #define SAI_RESET 5
 
+#define OPT_SAI 2
+
+extern float fat_diario;
+
 /* imprime o menu com as opcoes do modulo
 // administrativo */
 void menu_adm();
@@ -36,12 +44,20 @@ void zera_bd_funcionario();
 // referentes ao cardapio*/
 void zera_bd_cardapio();
 
-
+/* A funcao cadastra_cardapio() cadastra novos itens do cardapio no
+// Banco de dados bd_cardapio.txt */
 void cadastra_cardapio(Cardapio *card, char *item, float valor);
 
+/* Perguntar qual foi op erro*/
+//void cadastra_funcionario(Funcionarios *func, char nome, int turno);
+
+/* */
+int inicia_senha();
+
+/* */
+int troca_senha(int nova_senha);
 
 
-//int guarda_posicao_card();
 
-//void cria_guarda_pos();
+
 #endif // ADMINISTRATIVO_C

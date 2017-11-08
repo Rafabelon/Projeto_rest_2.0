@@ -18,6 +18,14 @@
 #define INSERE_PED 2
 #define SAI_PED 3
 
+/* Parametros de Pagamento */
+#define PARCELA_MAX 12
+
+/*Escolhas do menu pagamneto */
+#define CARTAO 1
+#define DINHEIRO 2
+#define SAI_PAG 3
+
 /*Parametros para Structs*/
 #define MAX_CADASTRO 100
 #define MAX_CARDAPIO 100
@@ -25,6 +33,7 @@
 #define CHAR_ITEM_MAX 71
 
 extern int id_card; // extern determina que é uma variável global do projeto.
+extern int id_cli;
 
 struct cadastro {
     int codigo;
@@ -51,9 +60,12 @@ void menu_clientes();
 /* tem o objetivo de imprimir as opcoes do modulo pedidos */
 void menu_pedido();
 
+/* Informa as Modalidades de Pagamento */
+void menu_pagamento();
+
 /* A funcao inicia_cadastro tem o objetivo de zerar os valores
 // e caracteres da struct Cadastro */
-Cadastro* inicia_cadastro(int tam);
+Cadastro* inicia_cadastro();
 
 /* A funcao inicia_cadastro tem o objetivo de zerar os valores
 // e caracteres da struct Cardapio */
@@ -61,7 +73,7 @@ Cardapio* inicia_cardapio();
 
 /* A funcao cadastro_cliente tem o objetivo de salvar as informacoes
 // da struct Cadastro em um arquivo de texto ou banco de dados */
-void cadastro_cliente (Cadastro *cad, int tam, int id, char *nome, int tel);
+void cadastro_cliente (Cadastro *cad, char *nome, int tel);
 
 /* A funcao imprime_cardapio le as informacoes contidas no arquivo
 // bd_cardapio e as imprime na tela */
@@ -72,5 +84,10 @@ void imprime_cardapio (Cardapio *card);
 // determinado cliente */
 void registra_pedido(Cardapio *card, Cadastro *cad, int tam, int id, char *pedido);
 
+
+float pag_cartao(Cadastro *cad,int id, int parcela);
+
+
+void troco(Cadastro *cad, int id, float dinheiro);
 
 #endif // CLIENTES_H

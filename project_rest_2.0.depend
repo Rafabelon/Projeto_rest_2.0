@@ -1,31 +1,39 @@
 # depslib dependency file v1.0
-1509412170 source:d:\project_rest_2.0\administrativo.c
+1510153440 source:d:\project_rest_2.0\administrativo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"administrativo.h"
 	"clientes.h"
-
-1509412170 d:\project_rest_2.0\administrativo.h
-	"clientes.h"
-
-1509412170 d:\project_rest_2.0\clientes.h
-
-1509412170 source:d:\project_rest_2.0\clientes.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"clientes.h"
-
-1509412170 source:d:\project_rest_2.0\funcionarios.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
 	"funcionarios.h"
 
-1509412170 d:\project_rest_2.0\funcionarios.h
+1510153440 d:\project_rest_2.0\administrativo.h
+	"clientes.h"
 
-1509412170 source:d:\project_rest_2.0\main.c
+1510017070 d:\project_rest_2.0\clientes.h
+
+1510156928 source:d:\project_rest_2.0\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"administrativo.h"
+	"funcionarios.h"
+
+1510183202 source:d:\project_rest_2.0\funcionarios.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"funcionarios.h"
+	"clientes.h"
+	"administrativo.h"
+
+1510179116 d:\project_rest_2.0\funcionarios.h
+	"clientes.h"
+	"administrativo.h"
+
+1510179380 source:d:\project_rest_2.0\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
